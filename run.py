@@ -21,6 +21,11 @@ df = load_data(data_path)
 df = clean_data(df)
 df = transform_data(df)
 
+
+# to ensure the incident_date column is in datetime format
+if not pd.api.types.is_datetime64_any_dtype(df['incident_date']):
+    raise TypeError("The incident_date column is not in datetime format.")
+
 # next to analyze the data received
 summary_stats = get_summary_statistics(df)
 print(summary_stats)
