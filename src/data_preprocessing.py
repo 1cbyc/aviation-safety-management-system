@@ -9,7 +9,7 @@ def transform_data(df):
     """transform data for analysis"""
     # convert the incident_date to datetime
     df['incident_date'] = pd.to_datetime(df['incident_date'])
-    # to create a new column for the numerical representation of incident 
+    # to create a new column for the numerical representation of incident_date
     df['incident_date'] = pd.to_datetime(df['incident_date']).apply(lambda x: x.toordinal())
     return df
 
