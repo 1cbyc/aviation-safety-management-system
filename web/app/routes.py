@@ -36,7 +36,7 @@ def upload_file():
             # to plot and save the safety trends graph
             plot_filename = f'safety_trends_{filename.split(".")[0]}.png'
             plot_path = os.path.join(current_app.config['PLOTS_FOLDER'], plot_filename)
-            plot_safety_trends(trends, save_path=save_path)
+            plot_safety_trends(trends, save_path=plot_path)
 
             # to return a link to download the generated plot
             return render_template('results.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
