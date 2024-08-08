@@ -9,3 +9,4 @@ In this project, my plan is to manage and analyze safety reports and incident da
 - `notebooks/`: Jupyter notebooks for exploratory data analysis.
 - `src/`: wrote the source code for data ingestion, preprocessing, analysis, visualization, and modeling hee.
 - `tests/`: all unit tests req for the source code.
+- `requirements.txt`: added a list of required libraries.
