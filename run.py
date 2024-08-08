@@ -27,7 +27,7 @@ print(summary_stats)
 
 trends = get_safety_trends(df)
 
-# now create plots directory if it does not exost
+# now create plots directory if it does not exist
 if not os.path.exists('plots'):
     os.makedirs('plots')
 
@@ -36,6 +36,7 @@ plot_safety_trends(trends)
 # time to train the model
 # in this case 'incident_severity' is the target variable and other columns as features
 X = df.drop(columns=['incident_severity'])
+X = df.dro
 y = df['incident_severity']
 model = train_model(X, y)
 
