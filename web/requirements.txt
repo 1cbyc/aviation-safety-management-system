@@ -1,4 +1,6 @@
 watchdog
+Flask
 pandas
-scikit-learn
 matplotlib
+joblib
+scikit-learn
