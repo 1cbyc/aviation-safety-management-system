@@ -21,7 +21,7 @@ trends = get_safety_trends(df)
 plot_safety_trends(trends)
 
 # time to train the model
-# let's assume 'incident_severity' is the target variable 
+# let's assume 'incident_severity' is the target variable and other colums as 
 X = df.drop(columns=['incident_severity'])
 y = df['incident_severity']
 model = train_model(X, y)
