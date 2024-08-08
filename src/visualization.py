@@ -20,3 +20,5 @@ def plot_safety_trends(trends):
     plt.show()
 
 # my aim here is to visualize the data to gain insights
+
+# i added the plt.show and the plt.grid and also changed location of the plt.savefig and added a plt.plot to allow it to also show popup window of the graph after running the script.
