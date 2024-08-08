@@ -36,4 +36,4 @@ I used the MIT License.
 ## About Contributing
 see, i am open to receiving contribution. just fork the repo, and make changes and make a pr here, i would review and revert. if it looks good to me, i will accept your pr.
 
-# i wish it was as easy as i made it seem
+# i wish it was as easy as i made it seem, now my leg hurts from keeping straight. and ofc, my neck too
