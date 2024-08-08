@@ -30,5 +30,5 @@ In this project, my plan is to manage and analyze safety reports and incident da
     ```
 3. i wish you luck, maybe?
 
-## License
-This project is licensed under the MIT License.
+## About License
+I used the MIT License.
