@@ -12,3 +12,5 @@ def transform_data(df):
     return df
 
 # my aim here is to prepare data for analysis by cleaning, transforming and also handling the missing values.
+
+# now i added  a step to convert the incident_date to a numerical format:
