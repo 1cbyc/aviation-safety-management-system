@@ -34,4 +34,4 @@ In this project, my plan is to manage and analyze safety reports and incident da
 I used the MIT License.
 
 ## About Contributing
-see, i am open to receiving contribution. just fork the repo, and make changes 
+see, i am open to receiving contribution. just fork the repo, and make changes and push here, i would review and revert. if it looks good to me, i will push
