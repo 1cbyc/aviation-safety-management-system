@@ -12,3 +12,10 @@ In this project, my plan is to manage and analyze safety reports and incident da
 - `requirements.txt`: added a list of required libraries.
 - `README.md`: you know what it is.
 - `run.py`: well, has everything you'd want to run the asms.
+
+## Installation
+1. Clone the repository.
+2. Install the required libraries:
+    ```bash
+    pip install -r requirements.txt
+    ```
