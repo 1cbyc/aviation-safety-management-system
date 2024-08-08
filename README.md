@@ -24,7 +24,7 @@ In this project, my plan is to manage and analyze safety reports and incident da
 
 ## using the asms
 1. just place raw data files in the `data/raw/` directory.
-2. Run the main script:
+2. then, run the main script like this:
     ```bash
     python run.py
     ```
