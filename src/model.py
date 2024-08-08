@@ -21,6 +21,8 @@ import joblib
 
 
 def train_model(X, y):
+    """to train the ml model now"""
+    # encoding target variable if necessary
     if y.dtype == 'object':
         le = LabelEncoder()
         y = le.fit_transform(y)
@@ -29,5 +31,6 @@ def train_model(X, y):
     model = LogisticRegression()
     model.fit(X_train, y_train)
 
+    # to save the trained model
     joblib.dump(model, 'models/logistic_regression_model.pkl')
     return model
