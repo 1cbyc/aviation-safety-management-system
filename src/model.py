@@ -1,6 +1,8 @@
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
+from sklearn.preprocessing import LabelEncoder
+import joblib
 
 def train_model(X, y):
     """to train the ML model"""
