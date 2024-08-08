@@ -7,6 +7,8 @@ def plot_safety_trends(trends):
     plt.title('Safety Trends Over Time')
     plt.xlabel('Year')
     plt.ylabel('Number of Incidents')
-    plt.show()
+    plt.savefig('plots/safety_trends.png') # to save the plotted graph to a file
+    plt.close() # to close the plot to free resources
+    # plt.show()
 
 # my aim here is to visualize the data to gain insights
