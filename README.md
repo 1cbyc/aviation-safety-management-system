@@ -7,3 +7,5 @@ In this project, my plan is to manage and analyze safety reports and incident da
 ## Dir Mapping
 - `data/`: For the raw and processed data files.
 - `notebooks/`: Jupyter notebooks for exploratory data analysis.
+- `src/`: wrote the source code for data ingestion, preprocessing, analysis, visualization, and modeling.
+- `tests/`: Unit tests for the source code.
