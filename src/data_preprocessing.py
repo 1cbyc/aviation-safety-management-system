@@ -7,7 +7,9 @@ def clean_data(df):
 
 def transform_data(df):
     """transform data for analysis"""
-    # df['incident_date'] = pd.to_datetime(df['incident_date'])
+    # convert the incident_date to datetime
+    df['incident_date'] = pd.to_datetime(df['incident_date'])
+    # to create a new column for the numerical representation of incident 
     df['incident_date'] = pd.to_datetime(df['incident_date']).apply(lambda x: x.toordinal())
     return df
 
