@@ -9,6 +9,10 @@ from src.model import train_model
 # let's define data path first
 data_path = 'data/raw/safety_reports.csv'
 
+# then check if the file even exists
+if not os.path.exists(data_path):
+    raise FileNotFoundError(f"The file {data_path} does not exist. Please provide the correct file path.")
+
 # # first to load the data
 # data_path = 'data/raw/safety_reports.csv'
 # df = load_data(data_path)
