@@ -21,11 +21,12 @@ trends = get_safety_trends(df)
 plot_safety_trends(trends)
 
 # time to train the model
-# let's assume 'incident_severity' is the target variable and other colums as 
+# in this case 'incident_severity' is the target variable and other columns as features
 X = df.drop(columns=['incident_severity'])
 y = df['incident_severity']
 model = train_model(X, y)
 
+# then save the processed data
 processed_data_path = 'data/processed/cleaned_safety_reports.csv'
 save_data(df, processed_data_path)
 
