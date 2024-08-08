@@ -23,8 +23,8 @@
 #     #
 #     # # not needed but can be used to show the plot if running locally
 #     # plt.show()
-
 import matplotlib.pyplot as plt
+
 
 def plot_safety_trends(trends, save_path=None):
         plt.figure(figsize=(10, 6))
@@ -35,10 +35,10 @@ def plot_safety_trends(trends, save_path=None):
         plt.grid(True)
 
         if save_path:
-            plt.savefig(save_path)
+                plt.savefig(save_path)
         else:
-            plt.show()
+                plt.show()
 
         plt.close()
 
-    # what i did: the save_path param used is cause the plot_safety_trends function now accepts an optional save_path parameter. so if this parameter is provided, the plot is saved to the specified path. If it's not provided, the plot is displayed using plt.show(). issue i had before doing this is because i wanted to make sure the uploaded files can plot the graph visibly and also allow to be saved for download.
+# what i did: the save_path param used is cause the plot_safety_trends function now accepts an optional save_path parameter. so if this parameter is provided, the plot is saved to the specified path. If it's not provided, the plot is displayed using plt.show(). issue i had before doing this is because i wanted to make sure the uploaded files can plot the graph visibly and also allow to be saved for download.
