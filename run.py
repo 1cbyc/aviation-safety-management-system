@@ -26,6 +26,11 @@ summary_stats = get_summary_statistics(df)
 print(summary_stats)
 
 trends = get_safety_trends(df)
+
+# now create plots directory if it does not exost
+if not os.path.exists('plots'):
+    os.makedirs('plots')
+    
 plot_safety_trends(trends)
 
 # time to train the model
