@@ -1,1 +1,4 @@
 watchdog
+pandas
+scikit-learn
+matplotlib
