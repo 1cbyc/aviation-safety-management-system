@@ -28,4 +28,7 @@ In this project, my plan is to manage and analyze safety reports and incident da
     ```bash
     python run.py
     ```
+3. i wish you luck, maybe?
 
+## License
+This project is licensed under the MIT License.
