@@ -8,14 +8,14 @@ from src.analysis import get_summary_statistics, get_safety_trends
 from src.visualization import plot_safety_trends
 from src.model import train_model
 
-app = Flask(__name__)
-# main = Blueprint('main', __name__)
+# app = Flask(__name__)
+main = Blueprint('main', __name__)
 
 UPLOAD_FOLDER = 'data/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-@app.route('/', methods=['GET', 'POST'])
+@main.route('/', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
         if 'file' not in request.files:
@@ -25,7 +25,7 @@ def upload_file():
             return redirect(request.url)
         if file:
             filename = secure_filename(file.filename)
-            # Ensure the directory exists
+            # to ensure the directory exists
             os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
@@ -68,6 +68,10 @@ def upload_file():
 #     return render_template('upload.html')
 
 
+# @main.route('/download/<filename>')
+# def download_file(filename):
+#     return send_from_directory(directory='app/static/plots', path=filename)
+
 @main.route('/download/<filename>')
 def download_file(filename):
-    return send_from_directory(directory='app/static/plots', path=filename)
+    return send_from_directory(directory=current_app.config[])
