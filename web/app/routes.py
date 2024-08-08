@@ -33,39 +33,39 @@ def upload_file():
     return render_template('upload.html')
 
 # maybe i should ditch this:
-@main.route('/', methods=['GET', 'POST'])
-def upload_file():
-    if request.method == 'POST':
-        # to check if the file is in the request
-        if 'file' not in request.files:
-            return redirect(request.url)
-
-        file = request.files['file']
-        if file.filename == '':
-            return redirect(request.url)
-
-        if file:
-            filename = secure_filename(file.filename)
-            file_path = os.path.join('data/uploads', filename)
-            file.save(file_path)
-
-            # to process the file
-            df = load_data(file_path)
-            df = clean_data(df)
-            df = transform_data(df)
-
-            # to generate summary and trends
-            summary_stats = get_summary_statistics(df)
-            trends = get_safety_trends(df)
-
-            # to save the plot
-            plot_filename = f'safety_trends_{filename.split(".")[0]}.png'
-            plot_path = os.path.join('app/static/plots', plot_filename)
-            plot_safety_trends(trends, save_path=plot_path)
-
-            return render_template('results.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
-
-    return render_template('upload.html')
+# @main.route('/', methods=['GET', 'POST'])
+# def upload_file():
+#     if request.method == 'POST':
+#         # to check if the file is in the request
+#         if 'file' not in request.files:
+#             return redirect(request.url)
+#
+#         file = request.files['file']
+#         if file.filename == '':
+#             return redirect(request.url)
+#
+#         if file:
+#             filename = secure_filename(file.filename)
+#             file_path = os.path.join('data/uploads', filename)
+#             file.save(file_path)
+#
+#             # to process the file
+#             df = load_data(file_path)
+#             df = clean_data(df)
+#             df = transform_data(df)
+#
+#             # to generate summary and trends
+#             summary_stats = get_summary_statistics(df)
+#             trends = get_safety_trends(df)
+#
+#             # to save the plot
+#             plot_filename = f'safety_trends_{filename.split(".")[0]}.png'
+#             plot_path = os.path.join('app/static/plots', plot_filename)
+#             plot_safety_trends(trends, save_path=plot_path)
+#
+#             return render_template('results.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
+#
+#     return render_template('upload.html')
 
 
 @main.route('/download/<filename>')
