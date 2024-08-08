@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from src.data_ingestion import load_data, save_data
 from src.data_preprocessing import clean_data, transform_data
@@ -5,9 +6,12 @@ from src.analysis import get_summary_statistics, get_safety_trends
 from src.visualization import plot_safety_trends
 from src.model import train_model
 
-# first to load the data
+# let's define data path first
 data_path = 'data/raw/safety_reports.csv'
-df = load_data(data_path)
+
+# # first to load the data
+# data_path = 'data/raw/safety_reports.csv'
+# df = load_data(data_path)
 
 # next to preprocess the data
 df = clean_data(df)
