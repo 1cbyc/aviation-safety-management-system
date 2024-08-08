@@ -22,8 +22,8 @@ In this project, my plan is to manage and analyze safety reports and incident da
 3. go to bed, or do your thing
 
 
-## Usage
-1. Place raw data files in the `data/raw/` directory.
+## using the asms
+1. just place raw data files in the `data/raw/` directory.
 2. Run the main script:
     ```bash
     python run.py
