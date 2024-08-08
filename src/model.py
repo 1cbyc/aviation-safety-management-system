@@ -22,6 +22,11 @@ import joblib
 
 def train_model(X, y):
     """to train the ml model now"""
+    # encoding categorical features in X
+    for col in X.select_dtypes(include=['object']).columns:
+        le = LabelEncoder()
+        X[col] = le.fit_transform(X[col])
+
     # encoding target variable if necessary
     if y.dtype == 'object':
         le = LabelEncoder()
