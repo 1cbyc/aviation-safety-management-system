@@ -38,6 +38,10 @@ def upload_file():
             plot_path = os.path.join(current_app.config['PLOTS_FOLDER'], plot_filename)
             plot_safety_trends(trends, save_path=plot_path)
 
+            # trying to see another way out:
+            
+
+
             # to return a link to download the generated plot
             return render_template('results.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
 
