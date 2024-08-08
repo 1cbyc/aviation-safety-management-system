@@ -8,8 +8,13 @@ from src.analysis import get_summary_statistics, get_safety_trends
 from src.visualization import plot_safety_trends
 from src.model import train_model
 
-main = Blueprint('main', __name__)
+app = Flask(__name__)
+# main = Blueprint('main', __name__)
 
+UPLOAD_FOLDER = 'data/uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+@app.route('/', )
 
 @main.route('/', methods=['GET', 'POST'])
 def upload_file():
