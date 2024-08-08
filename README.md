@@ -14,8 +14,9 @@ In this project, my plan is to manage and analyze safety reports and incident da
 - `run.py`: well, has everything you'd want to run the asms.
 
 ## Speaking of Installation
-1. jjust clone this repor.
-2. Install the required libraries:
+1. jjust clone this repo.
+2. then install the libraries:
     ```bash
     pip install -r requirements.txt
     ```
+
