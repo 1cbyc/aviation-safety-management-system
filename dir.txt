@@ -1,0 +1,21 @@
+aviation_safety_management_system/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── notebooks/
+│   └── exploratory_data_analysis.ipynb
+├── src/
+│   ├── __init__.py
+│   ├── data_ingestion.py
+│   ├── data_preprocessing.py
+│   ├── analysis.py
+│   ├── visualization.py
+│   └── model.py
+├── tests/
+│   ├── test_data_ingestion.py
+│   ├── test_data_preprocessing.py
+│   ├── test_analysis.py
+│   └── test_model.py
+├── requirements.txt
+├── README.md
+└── run.py
