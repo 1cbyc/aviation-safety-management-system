@@ -74,4 +74,4 @@ def upload_file():
 
 @main.route('/download/<filename>')
 def download_file(filename):
-    return send_from_directory(directory=current_app.config[])
+    return send_from_directory(directory=current_app.config['PLOTS_FOLDER'], path=filename)
