@@ -10,7 +10,8 @@ def transform_data(df):
     # convert the incident_date to datetime
     df['incident_date'] = pd.to_datetime(df['incident_date'])
     # to create a new column for the numerical representation of incident_date
-    df['incident_date'] = pd.to_datetime(df['incident_date']).apply(lambda x: x.toordinal())
+    # df['incident_date'] = pd.to_datetime(df['incident_date']).apply(lambda x: x.toordinal())
+    df['incident_date_ordinal'] = df['incident_date'].apply(lambda x: x.toordinal())
     return df
 
 # my aim here is to prepare data for analysis by cleaning, transforming and also handling the missing values.
