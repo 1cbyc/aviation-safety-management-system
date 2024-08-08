@@ -4,4 +4,6 @@ let me call this asms? would tend to the naming later. project live on: asms.nsi
 ## Introduction
 In this project, my plan is to manage and analyze safety reports and incident data in aviation using data mining and machine learning techniques I discovered.
 
-
+## Dir Structure
+- `data/`: Raw and processed data files.
+- `notebooks/`: Jupyter notebooks for exploratory data analysis.
