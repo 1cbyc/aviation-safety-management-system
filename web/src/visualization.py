@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 
-def plot_safety_trends(trends, save_path):
+# def plot_safety_trends(trends, save_path):
+def plot_safety_trends(trends, save_path=None):
     """to plot the safety trends over time and save"""
     plt.figure(figsize=(10, 6))
     # plt.plot(trends.index, trends.values, marker='o')
