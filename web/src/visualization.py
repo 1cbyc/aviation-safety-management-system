@@ -22,3 +22,5 @@ def plot_safety_trends(trends, save_path):
     #
     # # not needed but can be used to show the plot if running locally
     # plt.show()
+
+    # what i did: the save_path param used is cause the plot_safety_trends function now accepts an optional save_path parameter. so if this parameter is provided, the plot is saved to the specified path. If it's not provided, the plot is displayed using plt.show().
