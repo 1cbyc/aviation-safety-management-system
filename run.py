@@ -13,9 +13,9 @@ data_path = 'data/raw/safety_reports.csv'
 if not os.path.exists(data_path):
     raise FileNotFoundError(f"The file {data_path} does not exist. Please provide the correct file path.")
 
-# # first to load the data
+# then load the data
 # data_path = 'data/raw/safety_reports.csv'
-# df = load_data(data_path)
+df = load_data(data_path)
 
 # next to preprocess the data
 df = clean_data(df)
