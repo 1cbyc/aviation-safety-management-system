@@ -44,11 +44,11 @@ def upload_file():
             plot_filename = f'safety_trends_{filename.split(".")[0]}.png'
             plot_path = os.path.join(current_app.config['PLOTS_FOLDER'], plot_filename)
             print(f"Calling plot_safety_trends with {plot_path}")
+
             # plot_safety_trends(trends, save_path=plot_path)
-            plot_safety_trends() # just plot the trends without saving in the function
+            plot_safety_trends(trends) # just plot the trends without saving in the function
             plt.savefig(plot_path) # save the plot manually after it's created
             plt.close() # close the plot to free up memory
-
 
             # to return a link to download the generated plot
             return render_template('results.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
