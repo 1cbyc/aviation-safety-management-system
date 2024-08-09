@@ -23,6 +23,7 @@ def upload_file():
             filename = secure_filename(file.filename)
             # to ensure the directory exists
             os.makedirs(current_app.config['UPLOAD_FOLDER'], exist_ok=True)
+            os.makedirs(current_app.config)
             file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
 
