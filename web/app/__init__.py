@@ -22,3 +22,5 @@ app.config['PLOTS_FOLDER'] = os.path.join(app.root_path, 'static', 'plots')
 # to ensure the directories exist
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 os.makedirs(app.config['PLOTS_FOLDER'], exist_ok=True)
+
+#
