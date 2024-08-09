@@ -1,4 +1,4 @@
-Date,EventType,Location,Severity,Description
+incident_date,EventType,Location,Severity,Description
 2024-01-10,Incident,New York,Minor,Runway incursion without damage
 2024-01-15,Accident,Los Angeles,Major,Engine failure after takeoff
 2024-02-05,Incident,Chicago,Minor,Bird strike on final approach
