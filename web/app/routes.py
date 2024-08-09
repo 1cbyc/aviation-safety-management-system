@@ -46,7 +46,8 @@ def upload_file():
             print(f"Calling plot_safety_trends with {plot_path}")
             # plot_safety_trends(trends, save_path=plot_path)
             plot_safety_trends() # just plot the trends without saving in the function
-            plt.savefig(plot_path) # save the plot manually after 
+            plt.savefig(plot_path) # save the plot manually after it's created
+            plt.close() # close the plot to free up memory
 
 
             # to return a link to download the generated plot
