@@ -7,7 +7,7 @@ import pandas as pd
 from src.data_ingestion import load_data
 from src.data_preprocessing import clean_data, transform_data
 from src.analysis import get_summary_statistics, get_safety_trends
-from src.visualization import plot_safety_trends
+from ..src.visualization import plot_safety_trends
 
 main = Blueprint('main', __name__)
 
