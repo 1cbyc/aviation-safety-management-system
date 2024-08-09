@@ -56,6 +56,6 @@ def upload_file():
 
     return render_template('upload.html')
 
-# @main.route('/download/<filename>')
-# def download_file(filename):
-#     return send_from_directory(directory=current_app.config['PLOTS_FOLDER'], path=filename)
+@main.route('/download/<filename>')
+def download_file(filename):
+    return send_from_directory(directory=current_app.config['PLOTS_FOLDER'], path=filename)
