@@ -1,4 +1,6 @@
 import os
+
+import matplotlib.pyplot as plt
 from flask import Blueprint, render_template, request, redirect, url_for, send_from_directory, current_app
 from werkzeug.utils import secure_filename
 import pandas as pd
@@ -44,7 +46,8 @@ def upload_file():
             print(f"Calling plot_safety_trends with {plot_path}")
             # plot_safety_trends(trends, save_path=plot_path)
             plot_safety_trends() # just plot the trends without saving in the function
-            
+            plt.savefig(plot_path) # save the plot manually after 
+
 
             # to return a link to download the generated plot
             return render_template('results.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
