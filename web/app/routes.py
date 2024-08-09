@@ -23,7 +23,7 @@ def upload_file():
             filename = secure_filename(file.filename)
             # to ensure the directory exists
             os.makedirs(current_app.config['UPLOAD_FOLDER'], exist_ok=True)
-            os.makedirs(current_app.config)
+            os.makedirs(current_app.config['PLOTS_FOLDER'], exist_ok=True)
             file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
 
@@ -56,6 +56,6 @@ def upload_file():
 
     return render_template('upload.html')
 
-@main.route('/download/<filename>')
-def download_file(filename):
-    return send_from_directory(directory=current_app.config['PLOTS_FOLDER'], path=filename)
+# @main.route('/download/<filename>')
+# def download_file(filename):
+#     return send_from_directory(directory=current_app.config['PLOTS_FOLDER'], path=filename)
