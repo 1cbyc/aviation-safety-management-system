@@ -1,5 +1,12 @@
+import sys
 import os
 from flask import Flask
+
+# Add the 'web' directory to sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+# Print the sys.path for debugging
+print("sys.path in __init__.py:", sys.path)
 
 def create_app():
     app = Flask(__name__)
