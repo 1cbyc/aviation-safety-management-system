@@ -1,5 +1,5 @@
 from flask import Flask
-from web.routes import main
+from web.app.routes import main
 
 import logging
 logging.basicConfig(level=logging.DEBUG)
