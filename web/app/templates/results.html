@@ -11,6 +11,8 @@
     <div>
         {{ summary | safe }}
     </div>
+    <h2>Download the safety trends plot:</h2>
+    <a href="{{ url_for('main.download_file', filename=plot_filename) }}">Download Now</a>
     <h2>Safety Trends Plot</h2>
     <img src="{{ url_for('main.download_file', filename=plot_filename) }}" alt="Safety Trends Plot">
 </body>
