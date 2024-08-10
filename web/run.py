@@ -1,11 +1,11 @@
 from flask import Flask
-from routes import main  # to import Blueprint
+from app.routes import main  # to import Blueprint
 
 app = Flask(__name__)
 
 # Configure the paths for file uploads and plot storage
-app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['PLOTS_FOLDER'] = 'static/plots'
+app.config['UPLOAD_FOLDER'] = 'app/uploads'
+app.config['PLOTS_FOLDER'] = 'app/static/plots'
 # app.config['UPLOAD_FOLDER'] = 'web/app/uploads'
 # app.config['PLOTS_FOLDER'] = 'web/app/static/plots'
 
