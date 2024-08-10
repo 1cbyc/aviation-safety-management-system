@@ -31,8 +31,8 @@ def transform_data(df):
     - pd.DataFrame: The transformed DataFrame.
     """
     # Example transformation: Converting dates to datetime format
-    if 'date' in df.columns:
-        df['date'] = pd.to_datetime(df['date'])
+    if 'incident_date' in df.columns:
+        df['incident_date'] = pd.to_datetime(df['incident_date'])
 
     # Example transformation: Encoding categorical variables
     df = pd.get_dummies(df, drop_first=True)
