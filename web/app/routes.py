@@ -55,7 +55,6 @@ def upload_file():
 
     return render_template('upload.html')
 
-
 @main.route('/download/<filename>')
 def download_file(filename):
     try:
