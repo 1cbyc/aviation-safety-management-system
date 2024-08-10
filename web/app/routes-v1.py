@@ -63,7 +63,7 @@ def upload_file():
 #             plot_path = os.path.join('app/static/plots', plot_filename)
 #             plot_safety_trends(trends, save_path=plot_path)
 #
-#             return render_template('results.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
+#             return render_template('results-v2.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
 #
 #     return render_template('upload.html')
 

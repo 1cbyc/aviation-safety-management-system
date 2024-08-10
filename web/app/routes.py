@@ -54,7 +54,7 @@ def upload_file():
             plt.close() # close the plot to free up memory
 
             # to return a link to download the generated plot
-            return render_template('results.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
+            return render_template('results-v2.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
         except Exception as e:
             return str(e), 500
 
