@@ -1,6 +1,5 @@
 import os
 import matplotlib.pyplot as plt
-# from flask import Blueprint, render_template, request, redirect, url_for, send_from_directory, current_app
 from flask import Blueprint, render_template, request, redirect, send_from_directory, current_app
 from werkzeug.utils import secure_filename
 import pandas as pd
@@ -27,6 +26,7 @@ def upload_file():
             # to ensure the directory exists
             os.makedirs(current_app.config['UPLOAD_FOLDER'], exist_ok=True)
             os.makedirs(current_app.config['PLOTS_FOLDER'], exist_ok=True)
+            
             file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
 
