@@ -1,5 +1,5 @@
 from flask import Flask
-from routes import main  # to import Blueprint
+from web.routes import main  # to import Blueprint
 
 app = Flask(__name__)
 
