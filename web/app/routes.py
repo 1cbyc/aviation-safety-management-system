@@ -47,8 +47,7 @@ def upload_file():
             # trying to see another way out:
             plot_filename = f'safety_trends_{filename.split(".")[0]}.png'
             plot_path = os.path.join(current_app.config['PLOTS_FOLDER'], plot_filename)
-            print(f"Calling plot_safety_trends with {plot_path}")
-
+            # print(f"Calling plot_safety_trends with {plot_path}")
             # plot_safety_trends(trends, save_path=plot_path)
             plot_safety_trends(trends) # just plot the trends without saving in the function
             plt.savefig(plot_path) # save the plot manually after it's created
@@ -56,9 +55,14 @@ def upload_file():
 
             # to return a link to download the generated plot
             return render_template('results.html', summary=summary_stats.to_html(), plot_filename=plot_filename)
+        except Exception as e:
+            return str(e), 500
 
     return render_template('upload.html')
 
 @main.route('/download/<filename>')
 def download_file(filename):
-    return send_from_directory(directory=current_app.config['PLOTS_FOLDER'], path=filename)
+    try:
+        return send_from_directory(directory=current_app.config['PLOTS_FOLDER'], path=filename)
+    except Exception as e:
+        return str(e), 500
