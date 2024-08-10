@@ -1,3 +1,25 @@
+import pandas as pd
+
+
+def clean_data(df):
+    """
+    Cleans the data by handling missing values and duplicates.
+
+    Parameters:
+    - df (pd.DataFrame): The DataFrame to clean.
+
+    Returns:
+    - pd.DataFrame: The cleaned DataFrame.
+    """
+    # Handle missing values
+    df = df.dropna()
+
+    # Remove duplicates
+    df = df.drop_duplicates()
+
+    return df
+
+
 def transform_data(df):
     """
     Applies transformations to the data, such as encoding and normalization.
@@ -9,10 +31,8 @@ def transform_data(df):
     - pd.DataFrame: The transformed DataFrame.
     """
     # Example transformation: Converting dates to datetime format
-    if 'incident_date' in df.columns:
-        df['incident_date'] = pd.to_datetime(df['incident_date'])
-    else:
-        raise ValueError("DataFrame must contain an 'incident_date' column for transformation.")
+    if 'date' in df.columns:
+        df['date'] = pd.to_datetime(df['date'])
 
     # Example transformation: Encoding categorical variables
     df = pd.get_dummies(df, drop_first=True)
