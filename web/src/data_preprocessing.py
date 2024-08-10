@@ -19,7 +19,6 @@ def clean_data(df):
 
     return df
 
-
 def transform_data(df):
     """
     Applies transformations to the data, such as encoding and normalization.
@@ -30,7 +29,7 @@ def transform_data(df):
     Returns:
     - pd.DataFrame: The transformed DataFrame.
     """
-    # Example transformation: Converting dates to datetime format
+    # Convert 'incident_date' to datetime format
     if 'incident_date' in df.columns:
         df['incident_date'] = pd.to_datetime(df['incident_date'])
 
