@@ -22,8 +22,8 @@ def get_safety_trends(df):
     - pd.DataFrame: A DataFrame containing safety trends.
     """
     # Example: Grouping by a date column to find trends over time
-    if 'date' in df.columns:
-        trends = df.groupby(df['date'].dt.to_period('M')).sum()
+    if 'incident_date' in df.columns:
+        trends = df.groupby(df['incident_date'].dt.to_period('M')).sum()
         return trends
     else:
-        raise ValueError("DataFrame must contain a 'date' column for trend analysis.")
+        raise ValueError("DataFrame must contain a 'incident_date' column for trend analysis.")
