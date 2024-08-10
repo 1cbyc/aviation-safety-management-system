@@ -1,5 +1,5 @@
+import pandas as pd
 import matplotlib.pyplot as plt
-
 
 def plot_safety_trends(trends, save_path=None):
     """
@@ -11,7 +11,7 @@ def plot_safety_trends(trends, save_path=None):
     """
     plt.figure(figsize=(10, 6))
 
-    # converts the PeriodIndex to datetime
+    # Convert the PeriodIndex to datetime
     if isinstance(trends.index, pd.PeriodIndex):
         x = trends.index.to_timestamp()
     else:
