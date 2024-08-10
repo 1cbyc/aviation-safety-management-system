@@ -26,7 +26,7 @@ In this project, my plan is to manage and analyze safety reports and incident da
 1. just place raw data files in the `data/raw/` directory.
 2. then, run the main script like this:
     ```bash
-    python run.py
+    python former-run-3.py
     ```
 3. i wish you luck, maybe?
 
