@@ -1,0 +1,9 @@
+incident_date,EventType,Location,Severity,Description
+2024-01-10,Incident,New York,Minor,Runway incursion without damage
+2024-01-15,Accident,Los Angeles,Major,Engine failure after takeoff
+2024-01-25,Accident,Los Angeles,Major,Engine failure after takeoff
+2024-02-05,Incident,Chicago,Minor,Bird strike on final approach
+2024-03-20,Accident,Miami,Critical,Mid-air collision during maneuvering
+2024-03-25,Accident,Miami,Critical,Mid-air collision during maneuvering
+2024-04-12,Incident,Houston,Minor,Loss of communication with ATC
+2024-05-01,Accident,Atlanta,Major,Hard landing causing structural damage
